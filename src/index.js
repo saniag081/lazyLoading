@@ -1,6 +1,18 @@
-/**
- * This file is just a silly example to show everything working in the browser.
- * When you're ready to start on your site, clear the file. Happy hacking!
- **/
+const app = document.querySelector('#app')
 
-console.log('Happy hacking :)')
+
+function createImageNode() {
+	const container = document.createElement('div')
+	container.className = 'p-4'
+	const elementImage = document.createElement('img')
+	elementImage.className = 'mx-auto'
+	elementImage.width = '320'
+	elementImage.src = 'https://randomfox.ca/images/2.jpg'
+
+	container.appendChild(elementImage)
+	return container
+}
+
+const newImage = createImageNode()
+console.log(newImage)
+app.appendChild(newImage)
