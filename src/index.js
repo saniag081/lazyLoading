@@ -1,3 +1,5 @@
+import {registerImage} from './lazy'
+
 const app = document.querySelector('#app')
 const btnAddImage = document.querySelector('#addImage')
 const maxImage = 122
@@ -22,6 +24,7 @@ function createImageNode() {
 function addedImage () {
 	const newImage = createImageNode()
 	app.appendChild(newImage)
+	registerImage(newImage)
 }
 
 
